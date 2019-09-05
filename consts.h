@@ -4,9 +4,9 @@ const ftype dz=1.0;
 const ftype dt=1.0;
 
 //#define DDF
-  #define D1Q5
+ #define D1Q5
 //   #define D1Q3
-//#define D3Q125
+// #define D3Q125
 // #define D3Q27
 
 // #define NRMESH

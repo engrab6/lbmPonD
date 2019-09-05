@@ -41,13 +41,13 @@ ftype Trght=1.0     /1000000.;
     if(rb<1) {rho0=1.0; uT0=make_ftype4(0,0,0,T0*100);} else {rho0=1.0; uT0=make_ftype4(0,0,0,T0);}
 
      //---Burger's wave-----//
-     /*const ftype P0=1;
-     const ftype Ampl=0.2;
-     const ftype wlength = pars.Nx/4;
+     const ftype P0=1;
+     const ftype Ampl=0.02;
+     const ftype wlength = pars.Nx/1;
      ftype P=P0+Ampl*sin((x-xcnt)*2*M_PI/wlength); 
      ftype T = T0*pow(P,(gamma-1)/gamma);
      rho0=P/T;
-     uT0=make_ftype4(Ampl*sin((x-xcnt)*2*M_PI/wlength)/P0*T0/sqrt(gamma*T0),0,0,T);*/
+     uT0=make_ftype4(Ampl*sin((x-xcnt)*2*M_PI/wlength)/P0*T0/sqrt(gamma*T0),0,0,T);
      
      //-----------------//
      
@@ -79,13 +79,13 @@ ftype Trght=1.0     /1000000.;
     //-------------Sod problem----------//
 //     if( x<pars.Nx/2 ) { rho0=1; uT0=make_ftype4(0,0,0,0.01/rho0);
 //     } else {            rho0=0.125; uT0=make_ftype4(0,0,0,0.001/rho0);   }
-     if( x<pars.Nx/2 ) { rho0=1; uT0=make_ftype4(0,0,0,0.1/rho0); } 
-     else {              rho0=1; uT0=make_ftype4(0,0,0,0.02/rho0);   }
+//     if( x<pars.Nx/2 ) { rho0=1; uT0=make_ftype4(0,0,0,0.1/rho0); } 
+//     else {              rho0=1; uT0=make_ftype4(0,0,0,0.02/rho0);   }
     //----------------------------------//
     
     //------Spherical Sod problem----------//
-    //rb = sqrt(ftype(x*x+y*y+z*z));
-    //if(rb<pars.Nx/2) {rho0=1.0; uT0=make_ftype4(0,0,0,0.05/rho0);} else {rho0=0.125; uT0=make_ftype4(0,0,0,0.005/rho0);}
+//     rb = sqrt(ftype(x*x+y*y+z*z));
+//     if(rb<pars.Nx/2) {rho0=1.0; uT0=make_ftype4(0,0,0,0.05/rho0);} else {rho0=0.125; uT0=make_ftype4(0,0,0,0.005/rho0);}
     //-------------------------------------//
 
     //if( (x>128) ) {rho0=1.0012913189257875; uT0=make_ftype4((-63.218364928909956+30.0)/1000.,0,0, 1.7202785717223354/1000000.);}

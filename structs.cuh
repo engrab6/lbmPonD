@@ -8,13 +8,13 @@ const long int Gblock=1;
 const int Gsize=1;
 const long int Rank=4;
 const long int LSizeX=32;//32;
-const long int LSizeY=1;//4;
-const long int LSizeZ=1;//16*4;//4;
+const long int LSizeY=1;//32;//4;
+const long int LSizeZ=1;//32;//16*4;//4;
 const long int Nt=1;//1<<Rank;
 // const long int tfNx=((1<<Rank)+Nt-1)/Gblock;
 // const long int tfNy=((1<<Rank)+Nt-1)/Gblock;
 // const long int tfNz=((1<<Rank)+Nt-1)/Gblock;
-static constexpr uint3 brick=(const uint3){64u,1u,1u};
+static constexpr uint3 brick=(const uint3){4u,1u,1u};
 static constexpr int MultiplyDeBruijnBitPosition[32] = { 0,9,1,10,13,21,2,29,11,14,16,18,22,25,3,30,8,12,20,28,15,17,24,7,19,27,23,6,26,5,4,31 };
 constexpr __host__ __device__ int shiftOR(int v, int shift) { return v|v>>shift; }
 constexpr __host__ __device__ int MSB(int v) {
@@ -95,7 +95,7 @@ struct Cinfo{
 
 struct PhysPars {
   ftype dtau;
-  void set() { dtau=1.0/0.6;/*0.51*/; }
+  void set() { dtau=1.0/0.9;/*0.51*/; }
 };
 struct LBMParams{
   long int Nx,Ny,Nz;
